@@ -53,13 +53,13 @@ input {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.07);
   border-radius: 3px;
-  padding: 0 02px;
+  padding: 0 08px;
   font-size: 14px;
   font-weight: 300;
 }
 
 ::placeholder {
-  color: #1b1b1b;
+  color: #1b1b1b55;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,33 +78,11 @@ button {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-}
-.social {
-  margin-top: 30px;
-  display: flex;
-}
-.social div {
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255, 255, 255, 0.27);
-  color: #150f03;
-  text-align: center;
+  border: 1px solid black;
 }
 
 @media (prefers-color-scheme: dark) {
   .social div {
     color: #eaf0fb;
   }
-}
-
-.social div:hover {
-  background-color: rgba(255, 255, 255, 0.47);
-}
-.social .fb {
-  margin-left: 25px;
-}
-.social i {
-  margin-right: 4px;
 }
