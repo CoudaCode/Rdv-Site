@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 if(recupR != null){
                     recupR.push(data)
                     localStorage.setItem("Client", JSON.stringify(recupR))
-                    window.location.reload();
+                    Show()
                 }
                 else{
                     recupR = []
                     recupR.push(data);
                     localStorage.setItem("Client", JSON.stringify(recupR));
-                    window.location.reload();
+                    Show()
                     
                 }
 
@@ -42,12 +42,31 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
         
     }
-   
-
     
+   
+    function Show(){
+        divInfo = document.getElementById('popupdiv');
+        if (divInfo.style.display == 'none'){
+            divInfo.style.display = 'block';
+        }else{
+            divInfo.style.display = 'none';
+        }
+        
+    }
+    
+    function Hide(){
+        divInfo = document.getElementById('popupdiv');
+        if (divInfo.style.display == 'block'){
+            divInfo.style.display = 'none';
+        } else {
+            divInfo.style.display = 'block';
+        }
+    }
     myform?.addEventListener("submit", (e)=>e.preventDefault())
     btnValider?.addEventListener("click", CreateRDV)
 
+let backgroundPopUp = document.querySelector(".buttonInPopUp")
+backgroundPopUp.addEventListener("click", Hide);
 
 
     
