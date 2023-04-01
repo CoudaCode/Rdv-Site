@@ -1,0 +1,122 @@
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&family=Montserrat:wght@500&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  background-color: #eee;
+}
+
+
+.header {
+  background-image: url(https://images.pexels.com/photos/4481262/pexels-photo-4481262.jpeg?auto=compress&cs=tinysrgb&w=1600);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+.container h1 {
+ letter-spacing: 5px;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.container p {
+  font-size:4rem;
+  letter-spacing: 3px;
+  margin: 20px 0 40px;
+}
+
+
+
+.info {
+
+  color: white;
+  width: 300px;
+  height: 80px;
+  text-decoration: none;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+background-color: #27E1C1;
+}
+
+.info:hover,
+.info:focus {
+  background: hsl(0, 100%, 100%, .2);
+  outline: none;
+}
+
+.content{
+  width: 100vw;
+  height: 10vh;
+  margin-top: 5%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  display: flex;
+  margin: auto;
+  gap: 40px;
+  text-align: center;
+  font-family: arial;
+}
+
+.Motif {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #16FF00;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.heure{
+  margin-top: 20px;
+}
+.name{
+  font-size: 1.5rem;
+  width: auto;
+}
+
+.rdv{
+  width: auto ;
+  height: 20px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 4rem;
+  margin-bottom: 5%;
+}
