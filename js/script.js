@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         } else {
             divInfo.style.display = 'block';
         }
+        window.location.reload()
     }
     myform?.addEventListener("submit", (e)=>e.preventDefault())
     btnValider?.addEventListener("click", CreateRDV)
