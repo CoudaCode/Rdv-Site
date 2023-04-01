@@ -4,12 +4,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     function CreateRDV() {
         let nom = document.getElementById("nom")
         let prenom = document.getElementById("prenom");
-        let email = document.getElementById("email");
+        let email = document.getElementById("mail");
         let motif = document.getElementById("motif");
         let numero = document.getElementById("numero");
         let recupR = localStorage.getItem("Client");
          recupR = JSON.parse(recupR)
          let gene = new Date()
+         const hre = gene.getHours();
+         const mnute = gene.getMinutes();
 
         if(nom.value !="" || prenom.value != "" || email.value != "" || motif.value !="" || numero.value != ""){
             let data ={
@@ -18,7 +20,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 email: email.value,
                 motif: motif.value,
                 numero: numero.value,
-                dateInscri: gene.toLocaleDateString()
+                dateInscri: gene.toLocaleDateString(),
+                heure : `${hre}H : ${mnute} `
             } 
                 if(recupR != null){
                     recupR.push(data)
@@ -41,11 +44,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
    
 
-    function InFo() {
     
-    }
-    myform.addEventListener("submit", (e)=>e.preventDefault())
-    btnValider.addEventListener("click", CreateRDV)
+    myform?.addEventListener("submit", (e)=>e.preventDefault())
+    btnValider?.addEventListener("click", CreateRDV)
 
 
 
