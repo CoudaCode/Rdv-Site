@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     let btnValider = document.querySelector(".btnValider")
+    let myform = document.getElementById("myform");
     function CreateRDV() {
         let nom = document.getElementById("nom")
         let prenom = document.getElementById("prenom");
@@ -20,13 +21,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 dateInscri: gene.toLocaleDateString()
             } 
                 if(recupR != null){
-                    recupR.pus(data)
+                    recupR.push(data)
                     localStorage.setItem("Client", JSON.stringify(recupR))
+                    window.location.reload();
                 }
                 else{
                     recupR = []
                     recupR.push(data);
-                    localStorage.setItem("Client", JSON.stringify(recupR));  
+                    localStorage.setItem("Client", JSON.stringify(recupR));
+                    window.location.reload();
+                    
                 }
 
         }
@@ -40,6 +44,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     function InFo() {
     
     }
+    myform.addEventListener("submit", (e)=>e.preventDefault())
     btnValider.addEventListener("click", CreateRDV)
 
 
